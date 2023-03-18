@@ -13,7 +13,7 @@ function App() {
                 {/* navbar will always show because it's not in the switch statement */}
                 <div className="content">
                     <Switch>
-                        <Route path="/">
+                        <Route path="/"> {/* the / automatically goes to home */}
                             <Home />
                         </Route>
                     </Switch>
