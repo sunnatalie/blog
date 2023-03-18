@@ -7,7 +7,7 @@ interface HomeProps {}
 
 const Home: FC<HomeProps> = () => {
 
-    const { data: blogs, isPending, error } = useFetch('http://localhost:8000/blogs'); //descructuring 
+    const { data: blogs, isPending, error } = useFetch('http://localhost:8000/blogs'); //descructuring and uses the useFetch hook to fetch data
 
     return(
         <div className={`${styles.Home} home`}>
