@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC } from 'react';
 import useFetch from '../../hooks/useFetch';
 import BlogList from '../BlogList/BlogList';
 import styles from './Home.module.scss';
@@ -7,7 +7,7 @@ interface HomeProps {}
 
 const Home: FC<HomeProps> = () => {
 
-    const { data: blogs, isPending, error } = useFetch('http://localhost:8000/blogs'); //descructuring and uses the useFetch hook to fetch data
+    const { data: blogs, isPending, error } = useFetch('http://localhost:8000/blogs'); //destructuring and uses the useFetch hook to fetch data. //how to connect to json server in terminal: "npx json-server --watch data/db.json --port 8000". Specifying port 8000 so that the data is not connected to the port we're currently on (usually 3000)
 
     return(
         <div className={`${styles.Home} home`}>
