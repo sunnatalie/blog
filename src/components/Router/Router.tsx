@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
-import Home from '../Home/Home';
-import Create from '../Create/Create';
-import BlogDetails from '../Home/BlogDetails/BlogDetails';
+import Home from '../HomePage/Home';
+import Create from '../CreatePage/Create';
+import BlogDetails from '../HomePage/BlogDetails/BlogDetails';
 import { Navigate, Route, Routes} from 'react-router-dom';
 import styles from './Router.module.scss';
-import NotFound from '../NotFound/NotFound';
+import NotFound from '../NotFoundPage/NotFound';
 
 interface RouterProps {}
 

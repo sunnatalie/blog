@@ -1,11 +1,6 @@
 .Layout {
-    display: grid;
-    height:100vh;
-    grid-template-rows: 10% 80% 10%;
-    grid-template-columns: repeat(8, 1fr);
 
-    & > nav { grid-area: 1 / 3 / 2 / 7; }
-    & > main { grid-area: 2 / 3 / 9 / 7; }
-    & > footer { grid-area: 9 / 3 / 10 / 7; }
+    max-width: 800px;
+    margin: auto;
     
 }

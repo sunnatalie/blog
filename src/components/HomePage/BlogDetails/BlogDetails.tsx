@@ -4,6 +4,7 @@ import useFetch from '../../../hooks/useFetch';
 import { useNavigate } from 'react-router-dom';
 import Blog from '../../../models/blog';
 import styles from './BlogDetails.module.scss';
+import Loader from '../../Loader/Loader';
 
 interface BlogDetailsProps {}
 
@@ -23,7 +24,7 @@ const BlogDetails: FC<BlogDetailsProps> = () => {
 
     return(
         <div className={`${styles.BlogDetails} blog-details`}>
-            { isPending && <div>Loading...</div>}
+            { isPending && <Loader />}
             { error && <div>{ error }</div> }
             {blog && (
                 <article>
