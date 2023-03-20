@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import useFetch from '../../hooks/useFetch';
-import BlogList from '../BlogList/BlogList';
+import BlogList from './BlogList/BlogList';
 import styles from './Home.module.scss';
 
 interface HomeProps {}

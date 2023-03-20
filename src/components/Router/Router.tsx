@@ -1,9 +1,10 @@
 import React, { FC } from 'react';
 import Home from '../Home/Home';
 import Create from '../Create/Create';
-import BlogDetails from '../BlogDetails/BlogDetails';
+import BlogDetails from '../Home/BlogDetails/BlogDetails';
 import { Navigate, Route, Routes} from 'react-router-dom';
 import styles from './Router.module.scss';
+import NotFound from '../NotFound/NotFound';
 
 interface RouterProps {}
 
@@ -13,6 +14,7 @@ const Router: FC<RouterProps> = () => (
         <Route path='/create' element={<Create />} />
         <Route path='/blogs/:id' element={<BlogDetails />} />
         <Route path="/" element={<Navigate to="/Home" />} /> {/* default route path */}
+        <Route path="*" element={<NotFound />} /> {/* must be at bottom bc it catches anything that doesn't match the above routes */}
     </Routes>
 );
 
